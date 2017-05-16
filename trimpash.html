@@ -130,7 +130,7 @@
 					<div class="ZG_nowprice">\
 					${showCurrentPrice(CurrentPrice)}\
 					</div>\
-					<p class="ZG_price">${item.item_price}</p>\
+					<p class="ZG_price">${item.item_price|toFixed:1}</p>\
 					<img class="ZG_qu" width="70" height="28" src="//img.alicdn.com/tps/TB1gLpPLXXXXXbvaXXXXXXXXXXX-70-28.jpg">\
 				</div>\
 				<img class="ZG_img" width="230" height="230" src="//gw.alicdn.com/bao/uploaded/${item.item_pic}_400x400q50.jpg">\
@@ -153,7 +153,14 @@
 				var result = date.result[827753].result;
 				console.log(result);
 //				result.length = 0;//...当 listExpr 是 null 或者 length 为 0 ...
-				var str = template.process({list: result});//拼接的结果
+
+				var obj = {list: result};
+				obj._MODIFIERS = {
+					toFixed: function(n, num) {
+						return parseFloat(n).toFixed(num)
+					}
+				};
+				var str = template.process(obj);//拼接的结果
 				$('.ZG_body').append(str);
 			} else {
 				alert('wsdfajhvbaabjdsgbjvhdfv');
@@ -182,6 +189,33 @@
 	 					{/macro }\
 	 					{var CurrentPrice = item.item_current_price}\
 	 * 10、模板殷勤大写   capitalize  默认值
+	 * 11、操作数据使用自定义的方法
+	 * 		var data = {
+   				 name: 'iPhone 6 Plus',
+   				 weight: 480,
+   				 ram: '16gb',
+   				 networks: [
+        			'移动（TD-LTE)',
+        			'联通(TD-LTE)',
+        			'电信(FDD-LTE)'
+    			]
+			}
+
+	 		data._MODIFIERS = {
+    			toFixed: function(n, num) {
+        			return n.toFixed(num)
+   				}
+			}
+			var template = '\
+			名称: ${name}<br>\
+			重量：${weight|toFixed:2}<br>\
+			内存：${ram|capitalize}<br>\
+			网络：\
+			{for item in networks}\
+			{if item_index!=0}|{/if}\
+			${item}\
+			{/for}';
+	 		template.process(data)
 	 *
 	 */
 
