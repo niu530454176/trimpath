@@ -1,0 +1,183 @@
+body, p, img, dl, dt, dd, ul, ol, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font: 12px/1 "Microsoft YaHei", Arial;
+  min-width: 960px;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+img {
+  border: 0 none;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+s, em, i, a {
+  font-style: normal;
+  text-decoration: none;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.cf:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  zoom: 1;
+}
+
+.common-header {
+  width: 100%;
+  background: #c33;
+}
+.common-header ul {
+  width: 1143px;
+  margin: auto;
+  height: 34px;
+  line-height: 34px;
+  text-align: left;
+  padding-left: 20px;
+}
+.common-header ul li {
+  display: inline-block;
+  margin-right: 34px;
+  font-size: 16px;
+  text-align: center;
+  width: 40px;
+}
+.common-header ul li a {
+  color: #fff;
+}
+
+ul li a:hover {
+  color: #111;
+}
+
+.header {
+  width: 1140px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.header .header-bottom {
+  padding-left: 30px;
+  margin-top: 14px;
+}
+
+.header .header-bottom .left {
+  float: left;
+}
+
+.header .header-bottom ul {
+  float: left;
+  height: 54px;
+}
+
+.header .header-bottom li {
+  display: inline-block;
+  font-size: 15px;
+}
+
+.header .header-bottom li a {
+  color: #333;
+  line-height: 54px;
+  margin: 10px;
+}
+
+.header .header-bottom li a:hover {
+  color: #c66;
+}
+
+.hr {
+  width: 100%;
+  border: 1px solid #eee;
+}
+
+.hr2 {
+  width: 1140px;
+  margin: auto;
+  color: #eee;
+}
+
+.footer {
+  text-align: center;
+  color: #999;
+}
+
+.footer nav {
+  width: 600px;
+  margin: auto;
+  color: #999;
+  margin-top: 26px;
+}
+
+.footer nav li {
+  display: inline-block;
+  width: 74px;
+  margin-right: -3px;
+}
+
+.footer nav li a {
+  text-align: center;
+  color: #999;
+}
+
+.footer nav li a:hover {
+  color: #c33;
+}
+
+.footer h2 {
+  font-size: 18px;
+  margin-top: 36px;
+}
+
+.footer h2 i {
+  color: #c33;
+  margin: 5px;
+}
+
+.footer h2 em {
+  display: inline-block;
+  width: 110px;
+  font-size: 18px;
+  background: #c33;
+  height: 20px;
+  line-height: 20px;
+  color: #fff;
+  font-weight: normal;
+}
+
+.footer p {
+  font-size: 12px;
+  color: #999;
+  margin-top: 16px;
+}
+
+.footer a {
+  color: #999;
+  margin: 8px;
+}
+
+.footer .bottom {
+  margin-top: 16px;
+}
+
+/*# sourceMappingURL=common.css.map */
